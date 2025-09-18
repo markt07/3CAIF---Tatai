@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="100%" height="100%" fill="#111"/>
+  <g transform="translate(100,100)">
+    <circle cx="240" cy="220" r="180" fill="#e6e6e6"/>
+    <rect x="120" y="360" width="240" height="260" rx="40" fill="#d0d0d0"/>
+    <text x="600" y="200" font-size="96" fill="#fafafa" font-family="Helvetica, Arial, sans-serif">Jane</text>
+    <text x="600" y="300" font-size="48" fill="#bdb4ff" font-family="Helvetica, Arial, sans-serif">Minimal portrait</text>
+  </g>
+</svg>

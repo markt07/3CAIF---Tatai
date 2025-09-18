@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jane Margolis — Fan‑Seite</title>
+  <link id="theme" rel="stylesheet" href="css/theme-light.css" />
+  <style>
+    /* GPT hat vorgeschlagen ein bisschen CSS für die gesamt website zu machen welches sich nicht mit änderung des light/dark themes ändert. */
+    .container{max-width:1100px;margin:0 auto;padding:1.2rem;}
+    .visually-hidden{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;}
+    table{border-collapse:collapse;width:100%;}
+    th,td{padding:.6rem .8rem;border:1px solid var(--border);}
+    thead th{position:sticky;top:0;}
+    caption{caption-side:top;text-align:left;font-weight:600;margin-bottom:.2rem;}
+    figure{margin:0;}
+    img{max-width:100%;height:auto;display:block;border-radius:.5rem;}
+    form{display:grid;gap:.6rem;max-width:620px}
+    label{font-weight:600}
+    input,textarea,select{padding:.6rem .7rem;border:1px solid var(--border);border-radius:.5rem;background:var(--surface);color:var(--text)}
+    textarea{min-height:120px}
+    .btn{padding:.65rem 1rem;border-radius:.65rem;border:1px solid var(--border);background:var(--accent);color:var(--on-accent);cursor:pointer;font-weight:600}
+    .btn.secondary{background:transparent;color:var(--accent);}
+    .grid{display:grid;gap:1rem}
+    .grid.cols-2{grid-template-columns:1fr 1fr}
+    @media (max-width: 820px){.grid.cols-2{grid-template-columns:1fr}}
+    .pill{display:inline-block;padding:.25rem .6rem;border-radius:999px;border:1px solid var(--border);font-size:.85rem;margin-right:.3rem}
+    .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;font-size:.85rem;background:var(--surface-2);padding:.12rem .4rem;border-radius:.35rem;border:1px solid var(--border)}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Jane Margolis <span class="pill">Breaking Bad</span></h1>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav">
+          <li><a href="#bio">Biografie</a></li>
+          <li><a href="#episodes">Episoden‑Tabelle</a></li>
+          <li><a href="#feedback">Feedback</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="bio" class="grid cols-2">
+      <article>
+        <h2>Biografie</h2>
+        <p>
+          Jane Margolis ist eine fiktive Figur aus der Serie <em>Breaking Bad</em> —
+          eine tätowierende Künstlerin, Mitbewohnerin und Nachbarin von Jesse Pinkman.
+          Auf dieser Fan‑Seite findest du kompakte Infos, eine kleine Kunst‑Galerie
+          sowie eine Tabelle mit markanten Episodenmomenten.
+        </p>
+        <ul>
+          <li><strong>Beruf:</strong> Tätowiererin / Rezeptionistin in einem Tattoo‑Studio</li>
+          <li><strong>Beziehungen:</strong> Jesse Pinkman</li>
+        </ul>
+      </article>
+      <aside aria-label="Bild: Jane Portrait">
+        <figure>
+          <img src="img/jane-portrait.png" alt="Portrait" />
+        </figure>
+      </aside>
+    </section>
+
+    <section id="art" class="grid cols-2">
+        <img src="img/jane2.png" alt="Jane" />
+    </section>
+
+    <section id="episodes">
+      <h2>Episoden</h2>
+      <table>
+        <caption>Breaking Bad - Staffel 2-3</caption>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Folge</th>
+            <th scope="col">Titel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>S02E05</td><td>Breakage</td></tr>
+          <tr><td>2</td><td>S02E06</td><td>Peekaboo</td></tr>
+          <tr><td>3</td><td>S02E07</td><td>Negro y Azul</td></tr>
+          <tr><td>4</td><td>S02E08</td><td>Better Call Saul</td></tr>
+          <tr><td>5</td><td>S02E09</td><td>4 Days Out</td></tr>
+          <tr><td>6</td><td>S02E10</td><td>Over</td></tr>
+          <tr><td>7</td><td>S02E11</td><td>Mandala</td></tr>
+          <tr><td>8</td><td>S02E12</td><td>Phoenix</td></tr>
+          <tr><td>9</td><td>S02E13</td><td>ABQ</td></tr>
+          <tr><td>10</td><td>S03E01</td><td>No Más</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="feedback">
+      <h2>Feedback</h2>
+      <form action="#" method="post">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Dein Name" required />
+        </div>
+        <div>
+          <label for="fav">Lieblingsfolge mit Jane</label>
+          <select id="fav" name="fav">
+            <option value="">Bitte wählen…</option>
+            <option>S02E07 — Negro y Azul</option>
+            <option>S02E11 — Mandala</option>
+            <option>S02E12 — Phoenix</option>
+            <option>S02E13 — ABQ</option>
+          </select>
+        </div>
+        <div>
+          <label for="msg">Nachricht</label>
+          <textarea id="msg" name="msg" placeholder="Dein Feedback …"></textarea>
+        </div>
+        <div>
+          <button class="btn" type="submit">Absenden</button>
+          <button class="btn secondary" type="reset">Zurücksetzen</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Fan‑Projekt. Nicht offiziell mit der Serie verbunden.</p>
+    </div>
+  </footer>
+</body>
+</html>
