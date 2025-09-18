@@ -1,0 +1,1 @@
+Mit dem HTML5-Element <datalist> kann man Eingabefeldern eine Liste von Vorschlägen hinzufügen. Der Nutzer kann entweder einen der vorgeschlagenen Werte auswählen oder etwas völlig Eigenes eintragen. Das ist praktisch für Formulare, z. B. bei der Auswahl von Städten oder Farben.
