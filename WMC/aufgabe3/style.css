@@ -1,0 +1,13 @@
+body {
+    place-items: center;
+}
+
+table > thead > tr > th {
+    padding: 0.5em;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    user-select: none;
+}
+
+th.asc::after  { content: " ▲"; }
+th.desc::after { content: " ▼"; }
