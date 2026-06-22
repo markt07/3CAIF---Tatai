@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HxH Wiki</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>HxH Wiki</h1>
+        <nav>
+            <button class="nav-btn active" data-page="characters">Characters</button>
+            <button class="nav-btn" data-page="episodes">Episodes</button>
+            <button class="nav-btn" data-page="search">Search</button>
+            <button class="nav-btn" data-page="favorites">Favorites</button>
+        </nav>
+    </header>
+
+    <!-- Characters Page -->
+    <section id="page-characters" class="page">
+        <h2>Characters</h2>
+        <div class="filter-bar">
+            <label for="char-arc-select">Filter by Arc:</label>
+            <select id="char-arc-select">
+                <option value="all">All Arcs</option>
+                <option value="Hunter Exam">Hunter Exam</option>
+                <option value="Zoldyck Family">Zoldyck Family</option>
+                <option value="Heavens Arena">Heavens Arena</option>
+                <option value="Yorknew City">Yorknew City</option>
+                <option value="Greed Island">Greed Island</option>
+                <option value="Chimera Ant">Chimera Ant</option>
+                <option value="Election Arc">Election Arc</option>
+            </select>
+        </div>
+        <div id="characters-grid" class="cards-grid"></div>
+    </section>
+
+    <!-- Episodes Page -->
+    <section id="page-episodes" class="page hidden">
+        <h2>Episodes</h2>
+        <div class="filter-bar">
+            <label for="ep-arc-select">Filter by Arc:</label>
+            <select id="ep-arc-select">
+                <option value="all">All Arcs</option>
+                <option value="Hunter Exam">Hunter Exam (Ep 1–21)</option>
+                <option value="Zoldyck Family">Zoldyck Family (Ep 22–26)</option>
+                <option value="Heavens Arena">Heavens Arena (Ep 27–36)</option>
+                <option value="Yorknew City">Yorknew City (Ep 37–58)</option>
+                <option value="Greed Island">Greed Island (Ep 59–75)</option>
+                <option value="Chimera Ant">Chimera Ant (Ep 76–136)</option>
+                <option value="Election Arc">Election Arc (Ep 137–148)</option>
+            </select>
+        </div>
+        <div id="episodes-list"></div>
+        <button id="load-more-btn">Load More</button>
+    </section>
+
+    <!-- Search Page -->
+    <section id="page-search" class="page hidden">
+        <h2>Search</h2>
+        <div class="search-bar">
+            <input id="search-input" type="text" placeholder="Search characters or episodes...">
+            <select id="search-type">
+                <option value="characters">Characters</option>
+                <option value="episodes">Episodes</option>
+            </select>
+            <button id="search-btn">Search</button>
+        </div>
+        <div id="search-results"></div>
+    </section>
+
+    <!-- Favorites Page -->
+    <section id="page-favorites" class="page hidden">
+        <h2>Favorites</h2>
+        <div id="favorites-grid" class="cards-grid"></div>
+    </section>
+
+    <!-- Modal Overlay -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <button id="modal-close">X</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+</body>
+</html>
